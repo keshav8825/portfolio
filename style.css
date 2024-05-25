@@ -10,7 +10,7 @@
 }
 section{
     min-height: 100vh;
-    padding: 3rem 8% 2rem;
+    padding: 5rem 8% 2rem;
 }
 nav{
     width: 100%;
@@ -117,4 +117,327 @@ span{
     letter-spacing: .1rem;
     font-weight: 600;
     transition: .5s ease;
+}
+/*----------------about section------------------*/
+#about-content{
+    padding: 80px 0;
+    color: #0c0c0c;
+}
+.row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.about-col-1{
+    flex-basis: 35%;
+}
+.about-col-1 img{
+    width: 90%;
+    border-radius: 15px;
+}
+.about-col-2{
+    flex-basis: 60%;
+}
+.sub-title{
+    font-size: 60px;
+    font-weight: 600;
+    color:rgb(19, 18, 18);
+}
+.sub-titles{
+    display: flex;
+    margin: 20px 0 40px;
+}
+.tab-titles{
+    font-size: 24px;
+    margin: 5px 0 10px;
+    font-weight: 500;
+}
+.tab-links{
+    margin-right: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+}
+.tab-links::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background-color: #ff004f;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.5s;
+}
+.tab-contents ul li{
+    list-style: none;
+    margin: 8px 0;
+}
+.tab-contents ul li span{
+    color: #b54769;
+    font-size: 14px;
+}
+/* ----------------------skills section--------- */
+.skills{
+    display: flex;
+    flex-wrap: wrap;
+}
+.skills h1{
+    text-align: center;
+    font-size: 60px;
+    padding-bottom: 70px;
+    padding-top: 30px;
+}
+.sub-title span{
+    color: #0ef;
+}
+.container1{
+    width: 600px;
+    height: 500px;
+    padding: 75px 90px;
+    margin-left: 120px;
+}
+.heading{
+    text-align: center;
+    text-decoration: underline;
+    text-underline-offset: 10px;
+    text-decoration-thickness: 5px;
+    margin-bottom: 50px;
+}
+.bar{
+    font-size: 23px;
+}
+.Technical-bars .bar{
+    margin: 40px 0;
+}
+.Technical-bars .bar:last-child{
+    margin-top: 0;
+
+}
+.Technical-bars .bar .info{
+    margin-bottom: 5px;
+}
+.Technical-bars .bar .info span{
+    font-size: 17px;
+    font-weight: 500;
+    animation: showText 0.5s 1s linear forwards;
+    opacity: 0;
+}
+.Technical-bars .bar .progress-line{
+    position: relative;
+    border-radius: 10px;
+    width: 100%;
+    height: 5px;
+    background-color: #000;
+    animation: animate 1s cubic-bezier(1,0,0.5,1) forwards;
+    transform: scaleX(0);
+    transform-origin: left;
+}
+@keyframes animate{
+    100%{
+        transform: scaleX(1);
+    }
+}
+.Technical-bars .bar .progress-line span{
+    height: 100%;
+    background-color: #0ef;
+    position: absolute;
+    border-radius: 10px;
+    animation: animate 1s 1s cubic-bezier(1,0,0.5,1) forwards;
+    transform: scaleX(0);
+    transform-origin: left;
+}
+.progress-line.html span{
+    width: 90%;
+}
+.progress-line.css span{
+    width: 75%;
+}
+.progress-line.javascript span{
+    width: 55%;
+}
+.progress-line.python span{
+    width: 60%;
+}
+.progress-line.sql span{
+    width: 75%;
+}
+.progress-line span::after{
+    position: absolute;
+    padding: 1px 8px;
+    background-color: 1px 8px;
+    background-color: #000;
+    color: #fff;
+    font-size: 12px;
+    border-radius: 3px;
+    top: -28px;
+    right: -20px;
+    animation: showText 0.5s 1.5s linear forwards;
+    opacity: 0;
+}
+.progress-line.html span::after{
+    content: "90%";
+}
+.progress-line.css span::after{
+    content: "75%";
+}
+.progress-line.javascript span::after{
+    content:"55%";
+}
+.progress-line.python span::after{
+    content: "60%";
+}
+.progress-line.sql span::after{
+    content: "75%";
+}
+.progress-line span::before{
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-radius: 7px solid transparent;
+    border-bottom-width: 0px;
+    border-top-color: #000;
+    top: -10px;
+    right: 0;
+    animation: showText 0.5s 1.5s linear forwards;
+    opacity: 0;
+}
+@keyframes showText{
+    100%{
+        opacity: 1;
+    }
+}
+
+.radial-bars{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.radial-bars .radial-bar{
+    width: 50%;
+    height: 170px;
+    margin-bottom: 10px;
+    position: relative;
+}
+.radial-bars .radial-bar svg{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-90deg);
+    width: 120px;
+    height: 160px;
+}
+.radial-bars .radical-bar .progress-bar{
+    stroke-width: 10;
+    stroke: black;
+    fill: transparent;
+    stroke-dasharray: 502;
+    stroke-dashoffset: 502;
+    stroke-linecap: round;
+    animation: animate-bar 1s linear forwards;
+}
+@keyframes animate-bar{
+    100%{
+        stroke-dashoffset: -1;
+    }
+}
+.path{
+    stroke-width: 10;
+    stroke: #0ef;
+    fill: transparent;
+    stroke-dasharray: 502;
+    stroke-dashoffset: 502;
+    stroke-linecap: round;
+}
+.path-1{animation: animate-path1 1s 1s linear forwards;}
+.path-2{animation: animate-path1 1s 1s linear forwards;}
+.path-3{animation: animate-path1 1s 1s linear forwards;}
+.path-4{animation: animate-path1 1s 1s linear forwards;}
+
+@keyframes animate-path1{
+    100%{
+        stroke-dashoffset: 50;
+    }
+}
+@keyframes animate-path1{
+    100%{
+        stroke-dashoffset: 175;
+    }
+}
+@keyframes animate-path1{
+    100%{
+        stroke-dashoffset: 125;
+    }
+}
+@keyframes animate-path1{
+    100%{
+        stroke-dashoffset: 75;
+    }
+}
+/* -------------------contact Section---------------------- */
+.contact-left{
+    flex-basis: 35%;
+}
+.contact-right{
+    flex-basis: 60%;
+}
+.contact-left p i{
+    color: #ff004f;
+    margin-right: 15px;
+    font-size: 25px;
+}
+.social-icons{
+    margin-top: 30px;
+}
+.social-icons a{
+    text-decoration: none;
+    font-size: 30px;
+    margin-right: 15px;
+    color: #0e0c0c;
+    display: inline-block;
+    transition: transform 0.5s;
+}
+.social-icons a:hover{
+    color: #ff004f;
+    transform: translateY(-5px);
+}
+.resume-btn{
+    display: inline-block;
+    padding: 10px;
+    margin-top: 10px;
+    background-color: rgb(223, 70, 32);
+    border-radius: 5px;
+    box-shadow: 0 0 1rem;
+    font: 600 1.5rem sans-serif;
+    color: black;
+    letter-spacing: 0.1rem;
+    transition: all 0.5s ease;
+}
+.contact-right form{
+    width: 100%;
+}
+form input, form textarea{
+    width: 100%;
+    border: 0;
+    outline: none;
+    background: #262626;
+    padding: 15px;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 6px;
+}
+.cont-submit{
+    display: inline-block;
+    padding: 16px;
+    margin-left: 260px;
+    background-color: rgb(233,70, 32);
+    border-radius: 5px;
+    box-shadow: 0 0 1rem;
+    font: 600 2rem sans-serif;
+    color: black;
+    letter-spacing: 0.1rem;
+    transition: all 0.5s ease;
 }
